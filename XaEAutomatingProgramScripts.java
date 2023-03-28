@@ -1,17 +1,24 @@
-public class XaEAutomatingProgramScripts implements XaESkill {
-    
-    @Override
-    public String getName() {
-        return "Automating Program Scripts";
+public class XaEAutomatingProgramScripts extends XaESkill {
+    private String[] programLanguages = {"Java", "Python", "C++", "JavaScript", "Ruby"};
+    private String[] scriptTypes = {"Batch Script", "Shell Script", "PowerShell Script", "Perl Script"};
+
+    public XaEAutomatingProgramScripts() {
+        super("Automating Program Scripts");
     }
 
-    @Override
-    public String getDescription() {
-        return "XaE is able to automate program scripts to make repetitive tasks easier.";
+    public String[] getProgramLanguages() {
+        return programLanguages;
     }
 
-    public void automateScript(String scriptPath) {
-        // Add code to automate the specified script here
-        System.out.println("Script at " + scriptPath + " has been automated.");
+    public String[] getScriptTypes() {
+        return scriptTypes;
+    }
+
+    public String createScript(String programLanguage, String scriptType) {
+        return "Creating a " + programLanguage + " " + scriptType + " script...";
+    }
+
+    public String debugScript(String script) {
+        return "Debugging the " + script + " script...";
     }
 }
