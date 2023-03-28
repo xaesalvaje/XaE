@@ -19,4 +19,8 @@ public class XaE {
         sc.close();
         System.out.println("Goodbye!");
     }
+
+    public String generateResponse(String userInput) {
+        return null;
+    }
 }
